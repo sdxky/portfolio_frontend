@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Denis Novik</title>
+    <link rel="stylesheet" href="./style.css">
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+</head>
+
+<body>
+    <header class="container">
+        <!-- Fullscreen mobile menu overlay -->
+        <nav class="nav-mb">
+            <span id="close-btn">&times;</span>
+            <ul class="nav-mb-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+            <span class="nav-mb-lang">RU <b>| ENG</b></span>
+        </nav>
+
+        <!-- Desktop navigation -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home container">
+            <div class="bio">
+                <div class="bio-top">
+                    <h1>Denis <br> Novik</h1>
+                    <div id="burger" class="burger-icon" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <p>UX | UI designer <br>
+                    24 years old, Minsk
+                </p>
+                <span class="lang">RU <b>| ENG</b></span>
+            </div>
+            <img class="mainBanner" src="./assets/images/mainBanner.png" alt="Denis Novik - UX/UI Designer">
+            <img class="mainBanner_mb" src="./assets/images/mainBanner_mb.jpg" alt="Denis Novik - UX/UI Designer">
+        </section>
+
+        <!-- About Me section -->
+        <section id="about" class="aboutMe bgGrey">
+            <div class="container">
+                <h2 class="title">About me</h2>
+                <p>Hi, I'm Denis – UX/UI designer from Minsk. <br>
+                    I'm interested in design and everything connected with it.
+                </p>
+                <p>I'm studying at courses "Web and mobile design <br>
+                    interfaces" in IT-Academy.
+                </p>
+                <p>Ready to implement excellent projects <br>
+                    with wonderful people
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills section -->
+        <section id="skills" class="skills container">
+            <h2 class="title">Skills</h2>
+            <p class="skills-subtitle">I work in such programs as</p>
+            <div class="tools">
+                <div class="tool-item">
+                    <img src="./assets/icons/PS.png" alt="Adobe Photoshop">
+                </div>
+                <div class="tool-item">
+                    <img src="./assets/icons/AI.png" alt="Adobe Illustrator">
+                </div>
+                <div class="tool-item">
+                    <img src="./assets/icons/AE.png" alt="Adobe After Effects">
+                </div>
+                <div class="tool-item">
+                    <img src="./assets/icons/FIGMA.png" alt="Figma">
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio section -->
+        <section id="portfolio" class="portfolio bgGrey">
+            <div class="container">
+                <h2 class="title">Portfolio</h2>
+                <div class="portfolio-item">
+                    <img src="./assets/images/img1.png" alt="Online fashion store - Homepage">
+                    <a href="#">Online fashion store - Homepage</a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/images/img2.png" alt="Reebok Store - Concept">
+                    <a href="#">Reebok Store - Concept</a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/images/img3.png" alt="Braun Landing Page - Concept">
+                    <a href="#">Braun Landing Page - Concept</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contacts / Footer section -->
+    <footer id="contacts" class="contacts container">
+        <h2 class="title">Contacts</h2>
+        <p>Want to know more or just chat? <br> You are welcome!</p>
+        <button class="sendBtn">Send message</button>
+        <div class="icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener"><img src="./assets/icons/insta.svg" alt="Instagram"></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener"><img src="./assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://behance.net" target="_blank" rel="noopener"><img src="./assets/icons/behance.svg" alt="Behance"></a>
+            <a href="https://dribbble.com" target="_blank" rel="noopener"><img src="./assets/icons/dribble.svg" alt="Dribbble"></a>
+        </div>
+        <span class="subText">Like me on <br> LinkedIn, Instagram, Behance, Dribble</span>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $("#burger").click(function () {
+                $(".nav-mb").css("display", "flex");
+                $("body").css("overflow", "hidden");
+            });
+            $("#close-btn").click(function () {
+                $(".nav-mb").css("display", "none");
+                $("body").css("overflow", "auto");
+            });
+            $(".nav-mb a").click(function () {
+                $(".nav-mb").css("display", "none");
+                $("body").css("overflow", "auto");
+            });
+        });
+    </script>
+</body>
+
+</html>
